@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eff6ff">
+  <title>Sudoku Challenge 數獨挑戰</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header class="page-header">
+      <p class="eyebrow">每日一局，挑戰專注力</p>
+      <h1>Sudoku <span>Challenge</span></h1>
+      <p class="subtitle">填滿每一列、每一行與每個 3×3 宮格中的數字 1～9。</p>
+    </header>
+
+    <section class="game-card" aria-label="數獨遊戲">
+      <div class="game-info" aria-label="遊戲資訊">
+        <div class="info-item">
+          <span class="info-label">遊玩時間</span>
+          <strong id="timer">00:00</strong>
+        </div>
+        <div class="info-item">
+          <span class="info-label">目前分數</span>
+          <strong id="score">1000</strong>
+        </div>
+        <div class="info-item">
+          <span class="info-label">歷史最高分</span>
+          <strong id="best-score">尚無紀錄</strong>
+        </div>
+      </div>
+
+      <div id="board" class="board" role="grid" aria-label="數獨棋盤"></div>
+
+      <p id="message" class="message" role="status" aria-live="polite">
+        選取空格，再輸入數字開始挑戰。
+      </p>
+
+      <div class="number-pad" aria-label="數字輸入">
+        <button class="number-button" type="button" data-number="1">1</button>
+        <button class="number-button" type="button" data-number="2">2</button>
+        <button class="number-button" type="button" data-number="3">3</button>
+        <button class="number-button" type="button" data-number="4">4</button>
+        <button class="number-button" type="button" data-number="5">5</button>
+        <button class="number-button" type="button" data-number="6">6</button>
+        <button class="number-button" type="button" data-number="7">7</button>
+        <button class="number-button" type="button" data-number="8">8</button>
+        <button class="number-button" type="button" data-number="9">9</button>
+        <button id="clear-button" class="clear-button" type="button">清除</button>
+      </div>
+
+      <button id="restart-button" class="restart-button" type="button">重新開始</button>
+      <p class="keyboard-hint">也可以使用鍵盤輸入 1～9，按 Backspace 或 Delete 清除。</p>
+    </section>
+
+    <footer>固定題目數字不可修改，祝你遊玩愉快！</footer>
+  </main>
+</body>
+</html>
